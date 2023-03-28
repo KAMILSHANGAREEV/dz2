@@ -20,10 +20,20 @@ public class BotController {
 
 
 
+
+
     @PostMapping(consumes = "application/json", produces = "application/json")
     public DataClass update(@Valid @RequestBody DataClass dataClass) {
         return new DataClass(dataClass.getId(), dataClass.getUrl(), dataClass.getDescription(), dataClass.getTgChatIds());
     }
+
+
+
+
+
+
+
+
 
 
 
