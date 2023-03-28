@@ -17,10 +17,17 @@ public class BotController {
     @ApiResponse(responseCode = "400", description = "Некорректные параметры запроса")
 
 
+
+
+
     @PostMapping(consumes = "application/json", produces = "application/json")
     public DataClass update(@Valid @RequestBody DataClass dataClass) {
         return new DataClass(dataClass.getId(), dataClass.getUrl(), dataClass.getDescription(), dataClass.getTgChatIds());
     }
+
+
+
+
 
 
     @ResponseStatus(code = HttpStatus.BAD_REQUEST)
